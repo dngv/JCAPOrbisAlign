@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="alignment">
+    <file>alignprint.png</file>
+    <file>alignwafer.png</file>
+  </qresource>
+</RCC>
