@@ -29,6 +29,7 @@ class MyApp(QtGui.QMainWindow):
         self.ui.pb_preview.clicked.connect(self.calcoutput)
         self.ui.le_atskip.setReadOnly(True)
 
+        # Message buffer
         self.msglist = []
 
 
@@ -183,7 +184,10 @@ class MyApp(QtGui.QMainWindow):
 
     def applyfilter(self):
         """ """
-        codelist = [int(code) for code in self.paramd['keepcode'].replace(',', ' ').replace('\t', ' ').split()]
+        if type(self.parad['keepcode'])==str:
+            codelist = [int(code) for code in self.paramd['keepcode'].replace(',', ' ').replace('\t', ' ').split()]
+        else:
+            codelist = [int(code) for code in self.paramd['keepcode']]
         chanlist = [chan for chan in self.paramd['omitch'].replace(',', ' ').replace('\t', ' ').split()]
         if not any([codelist, chanlist]):
             self.filterdlist = self.mapdlist
