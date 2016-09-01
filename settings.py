@@ -5,4 +5,4 @@ rundir = 'C:\\INST\\RUNS'
 stagx_min = 0
 stagx_max = 101.9
 stagy_min = 0
-stagy_max = 100
+stagy_max = 101.9
