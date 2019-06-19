@@ -11,16 +11,23 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
+
     def _fromUtf8(s):
         return s
 
+
 try:
     _encoding = QtGui.QApplication.UnicodeUTF8
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig, _encoding)
+
+
 except AttributeError:
+
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -68,7 +75,9 @@ class Ui_MainWindow(object):
         self.lb_run.setSizePolicy(sizePolicy)
         self.lb_run.setMinimumSize(QtCore.QSize(40, 0))
         self.lb_run.setMaximumSize(QtCore.QSize(40, 24))
-        self.lb_run.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_run.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_run.setObjectName(_fromUtf8("lb_run"))
         self.horizontalLayout_4.addWidget(self.lb_run)
         self.le_run = QtGui.QLineEdit(self.gr_input)
@@ -103,7 +112,9 @@ class Ui_MainWindow(object):
         self.lb_map.setSizePolicy(sizePolicy)
         self.lb_map.setMinimumSize(QtCore.QSize(40, 0))
         self.lb_map.setMaximumSize(QtCore.QSize(40, 24))
-        self.lb_map.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_map.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_map.setObjectName(_fromUtf8("lb_map"))
         self.horizontalLayout_2.addWidget(self.lb_map)
         self.le_map = QtGui.QLineEdit(self.gr_input)
@@ -156,7 +167,9 @@ class Ui_MainWindow(object):
         self.lb_printpix = QtGui.QLabel(self.tab_print)
         self.lb_printpix.setGeometry(QtCore.QRect(0, 0, 191, 181))
         self.lb_printpix.setText(_fromUtf8(""))
-        self.lb_printpix.setPixmap(QtGui.QPixmap(_fromUtf8(":/alignment/alignprint.png")))
+        self.lb_printpix.setPixmap(
+            QtGui.QPixmap(_fromUtf8(":/alignment/alignprint.png"))
+        )
         self.lb_printpix.setScaledContents(False)
         self.lb_printpix.setAlignment(QtCore.Qt.AlignCenter)
         self.lb_printpix.setObjectName(_fromUtf8("lb_printpix"))
@@ -166,13 +179,17 @@ class Ui_MainWindow(object):
         self.lb_waferpix = QtGui.QLabel(self.tab_wafer)
         self.lb_waferpix.setGeometry(QtCore.QRect(0, 0, 191, 181))
         self.lb_waferpix.setText(_fromUtf8(""))
-        self.lb_waferpix.setPixmap(QtGui.QPixmap(_fromUtf8(":/alignment/alignwafer.png")))
+        self.lb_waferpix.setPixmap(
+            QtGui.QPixmap(_fromUtf8(":/alignment/alignwafer.png"))
+        )
         self.lb_waferpix.setScaledContents(False)
         self.lb_waferpix.setAlignment(QtCore.Qt.AlignCenter)
         self.lb_waferpix.setObjectName(_fromUtf8("lb_waferpix"))
         self.tb_align.addTab(self.tab_wafer, _fromUtf8(""))
         self.horizontalLayout_16.addWidget(self.tb_align)
-        spacerItem = QtGui.QSpacerItem(8, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        spacerItem = QtGui.QSpacerItem(
+            8, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum
+        )
         self.horizontalLayout_16.addItem(spacerItem)
         self.verticalLayout_8 = QtGui.QVBoxLayout()
         self.verticalLayout_8.setSizeConstraint(QtGui.QLayout.SetFixedSize)
@@ -181,7 +198,9 @@ class Ui_MainWindow(object):
         self.lb_stagcoord = QtGui.QLabel(self.gr_stage)
         self.lb_stagcoord.setObjectName(_fromUtf8("lb_stagcoord"))
         self.verticalLayout_8.addWidget(self.lb_stagcoord)
-        spacerItem1 = QtGui.QSpacerItem(20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        spacerItem1 = QtGui.QSpacerItem(
+            20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed
+        )
         self.verticalLayout_8.addItem(spacerItem1)
         self.tw_stage = QtGui.QTableWidget(self.gr_stage)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -213,7 +232,9 @@ class Ui_MainWindow(object):
         self.tw_stage.verticalHeader().setDefaultSectionSize(24)
         self.tw_stage.verticalHeader().setMinimumSectionSize(24)
         self.verticalLayout_8.addWidget(self.tw_stage)
-        spacerItem2 = QtGui.QSpacerItem(20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        spacerItem2 = QtGui.QSpacerItem(
+            20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed
+        )
         self.verticalLayout_8.addItem(spacerItem2)
         self.horizontalLayout_15 = QtGui.QHBoxLayout()
         self.horizontalLayout_15.setSizeConstraint(QtGui.QLayout.SetFixedSize)
@@ -227,7 +248,9 @@ class Ui_MainWindow(object):
         self.lb_stagz.setSizePolicy(sizePolicy)
         self.lb_stagz.setMinimumSize(QtCore.QSize(32, 0))
         self.lb_stagz.setMaximumSize(QtCore.QSize(32, 24))
-        self.lb_stagz.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_stagz.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_stagz.setObjectName(_fromUtf8("lb_stagz"))
         self.horizontalLayout_15.addWidget(self.lb_stagz)
         self.le_stagz = QtGui.QLineEdit(self.gr_stage)
@@ -240,7 +263,9 @@ class Ui_MainWindow(object):
         self.le_stagz.setMaximumSize(QtCore.QSize(54, 24))
         self.le_stagz.setObjectName(_fromUtf8("le_stagz"))
         self.horizontalLayout_15.addWidget(self.le_stagz)
-        spacerItem3 = QtGui.QSpacerItem(18, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
+        spacerItem3 = QtGui.QSpacerItem(
+            18, 20, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum
+        )
         self.horizontalLayout_15.addItem(spacerItem3)
         self.cb_rotonly = QtGui.QCheckBox(self.gr_stage)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -253,7 +278,9 @@ class Ui_MainWindow(object):
         self.cb_rotonly.setObjectName(_fromUtf8("cb_rotonly"))
         self.horizontalLayout_15.addWidget(self.cb_rotonly)
         self.verticalLayout_8.addLayout(self.horizontalLayout_15)
-        spacerItem4 = QtGui.QSpacerItem(20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        spacerItem4 = QtGui.QSpacerItem(
+            20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed
+        )
         self.verticalLayout_8.addItem(spacerItem4)
         self.le_waferignore = QtGui.QLabel(self.gr_stage)
         self.le_waferignore.setTextFormat(QtCore.Qt.RichText)
@@ -286,13 +313,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
         self.lb_keepcode = QtGui.QLabel(self.gr_filter)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_keepcode.sizePolicy().hasHeightForWidth())
         self.lb_keepcode.setSizePolicy(sizePolicy)
         self.lb_keepcode.setMinimumSize(QtCore.QSize(60, 0))
-        self.lb_keepcode.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_keepcode.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_keepcode.setObjectName(_fromUtf8("lb_keepcode"))
         self.horizontalLayout_5.addWidget(self.lb_keepcode)
         self.le_keepcode = QtGui.QLineEdit(self.gr_filter)
@@ -310,14 +341,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setSpacing(0)
         self.horizontalLayout_7.setObjectName(_fromUtf8("horizontalLayout_7"))
         self.lb_omitch = QtGui.QLabel(self.gr_filter)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_omitch.sizePolicy().hasHeightForWidth())
         self.lb_omitch.setSizePolicy(sizePolicy)
         self.lb_omitch.setMinimumSize(QtCore.QSize(60, 0))
         self.lb_omitch.setMaximumSize(QtCore.QSize(60, 16777215))
-        self.lb_omitch.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_omitch.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_omitch.setObjectName(_fromUtf8("lb_omitch"))
         self.horizontalLayout_7.addWidget(self.lb_omitch)
         self.le_omitch = QtGui.QLineEdit(self.gr_filter)
@@ -336,7 +371,9 @@ class Ui_MainWindow(object):
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.gr_platecoord.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.gr_platecoord.sizePolicy().hasHeightForWidth()
+        )
         self.gr_platecoord.setSizePolicy(sizePolicy)
         self.gr_platecoord.setMinimumSize(QtCore.QSize(220, 90))
         self.gr_platecoord.setMaximumSize(QtCore.QSize(220, 90))
@@ -349,14 +386,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.setSpacing(0)
         self.horizontalLayout_11.setObjectName(_fromUtf8("horizontalLayout_11"))
         self.lb_xmin = QtGui.QLabel(self.gr_platecoord)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_xmin.sizePolicy().hasHeightForWidth())
         self.lb_xmin.setSizePolicy(sizePolicy)
         self.lb_xmin.setMinimumSize(QtCore.QSize(42, 0))
         self.lb_xmin.setMaximumSize(QtCore.QSize(42, 16777215))
-        self.lb_xmin.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_xmin.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_xmin.setObjectName(_fromUtf8("lb_xmin"))
         self.horizontalLayout_11.addWidget(self.lb_xmin)
         self.le_xmin = QtGui.QLineEdit(self.gr_platecoord)
@@ -371,14 +412,18 @@ class Ui_MainWindow(object):
         self.le_xmin.setObjectName(_fromUtf8("le_xmin"))
         self.horizontalLayout_11.addWidget(self.le_xmin)
         self.lb_xmax = QtGui.QLabel(self.gr_platecoord)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_xmax.sizePolicy().hasHeightForWidth())
         self.lb_xmax.setSizePolicy(sizePolicy)
         self.lb_xmax.setMinimumSize(QtCore.QSize(42, 0))
         self.lb_xmax.setMaximumSize(QtCore.QSize(42, 16777215))
-        self.lb_xmax.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_xmax.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_xmax.setObjectName(_fromUtf8("lb_xmax"))
         self.horizontalLayout_11.addWidget(self.lb_xmax)
         self.le_xmax = QtGui.QLineEdit(self.gr_platecoord)
@@ -396,14 +441,18 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setSpacing(0)
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         self.lb_ymin = QtGui.QLabel(self.gr_platecoord)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_ymin.sizePolicy().hasHeightForWidth())
         self.lb_ymin.setSizePolicy(sizePolicy)
         self.lb_ymin.setMinimumSize(QtCore.QSize(42, 0))
         self.lb_ymin.setMaximumSize(QtCore.QSize(42, 16777215))
-        self.lb_ymin.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_ymin.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_ymin.setObjectName(_fromUtf8("lb_ymin"))
         self.horizontalLayout_6.addWidget(self.lb_ymin)
         self.le_ymin = QtGui.QLineEdit(self.gr_platecoord)
@@ -417,14 +466,18 @@ class Ui_MainWindow(object):
         self.le_ymin.setObjectName(_fromUtf8("le_ymin"))
         self.horizontalLayout_6.addWidget(self.le_ymin)
         self.lb_ymax = QtGui.QLabel(self.gr_platecoord)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_ymax.sizePolicy().hasHeightForWidth())
         self.lb_ymax.setSizePolicy(sizePolicy)
         self.lb_ymax.setMinimumSize(QtCore.QSize(42, 0))
         self.lb_ymax.setMaximumSize(QtCore.QSize(42, 16777215))
-        self.lb_ymax.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_ymax.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_ymax.setObjectName(_fromUtf8("lb_ymax"))
         self.horizontalLayout_6.addWidget(self.lb_ymax)
         self.le_ymax = QtGui.QLineEdit(self.gr_platecoord)
@@ -465,7 +518,9 @@ class Ui_MainWindow(object):
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.le_sampleskip.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.le_sampleskip.sizePolicy().hasHeightForWidth()
+        )
         self.le_sampleskip.setSizePolicy(sizePolicy)
         self.le_sampleskip.setMinimumSize(QtCore.QSize(60, 24))
         self.le_sampleskip.setMaximumSize(QtCore.QSize(60, 24))
@@ -475,10 +530,14 @@ class Ui_MainWindow(object):
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lb_sampleskip.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.lb_sampleskip.sizePolicy().hasHeightForWidth()
+        )
         self.lb_sampleskip.setSizePolicy(sizePolicy)
         self.lb_sampleskip.setMinimumSize(QtCore.QSize(50, 0))
-        self.lb_sampleskip.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lb_sampleskip.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lb_sampleskip.setObjectName(_fromUtf8("lb_sampleskip"))
         self.horizontalLayout_9.addWidget(self.lb_sampleskip)
         self.verticalLayout_5.addLayout(self.horizontalLayout_9)
@@ -503,7 +562,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lb_colskip.sizePolicy().hasHeightForWidth())
         self.lb_colskip.setSizePolicy(sizePolicy)
         self.lb_colskip.setMinimumSize(QtCore.QSize(50, 0))
-        self.lb_colskip.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lb_colskip.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lb_colskip.setObjectName(_fromUtf8("lb_colskip"))
         self.horizontalLayout_8.addWidget(self.lb_colskip)
         self.verticalLayout_5.addLayout(self.horizontalLayout_8)
@@ -528,7 +589,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lb_rowskip.sizePolicy().hasHeightForWidth())
         self.lb_rowskip.setSizePolicy(sizePolicy)
         self.lb_rowskip.setMinimumSize(QtCore.QSize(50, 0))
-        self.lb_rowskip.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lb_rowskip.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lb_rowskip.setObjectName(_fromUtf8("lb_rowskip"))
         self.horizontalLayout_14.addWidget(self.lb_rowskip)
         self.verticalLayout_5.addLayout(self.horizontalLayout_14)
@@ -553,7 +616,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.lb_atskip.sizePolicy().hasHeightForWidth())
         self.lb_atskip.setSizePolicy(sizePolicy)
         self.lb_atskip.setMinimumSize(QtCore.QSize(50, 0))
-        self.lb_atskip.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lb_atskip.setAlignment(
+            QtCore.Qt.AlignLeading | QtCore.Qt.AlignLeft | QtCore.Qt.AlignVCenter
+        )
         self.lb_atskip.setObjectName(_fromUtf8("lb_atskip"))
         self.horizontalLayout_10.addWidget(self.lb_atskip)
         self.verticalLayout_5.addLayout(self.horizontalLayout_10)
@@ -577,26 +642,34 @@ class Ui_MainWindow(object):
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.te_samplelist.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.te_samplelist.sizePolicy().hasHeightForWidth()
+        )
         self.te_samplelist.setSizePolicy(sizePolicy)
         self.te_samplelist.setMinimumSize(QtCore.QSize(280, 68))
         self.te_samplelist.setMaximumSize(QtCore.QSize(280, 68))
         self.te_samplelist.setObjectName(_fromUtf8("te_samplelist"))
         self.verticalLayout_3.addWidget(self.te_samplelist)
-        spacerItem5 = QtGui.QSpacerItem(20, 4, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        spacerItem5 = QtGui.QSpacerItem(
+            20, 4, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed
+        )
         self.verticalLayout_3.addItem(spacerItem5)
         self.horizontalLayout_13 = QtGui.QHBoxLayout()
         self.horizontalLayout_13.setSpacing(0)
         self.horizontalLayout_13.setObjectName(_fromUtf8("horizontalLayout_13"))
         self.lb_samplemin = QtGui.QLabel(self.gr_sample)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_samplemin.sizePolicy().hasHeightForWidth())
         self.lb_samplemin.setSizePolicy(sizePolicy)
         self.lb_samplemin.setMinimumSize(QtCore.QSize(80, 0))
         self.lb_samplemin.setMaximumSize(QtCore.QSize(80, 16777215))
-        self.lb_samplemin.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_samplemin.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_samplemin.setObjectName(_fromUtf8("lb_samplemin"))
         self.horizontalLayout_13.addWidget(self.lb_samplemin)
         self.le_samplemin = QtGui.QLineEdit(self.gr_sample)
@@ -610,14 +683,18 @@ class Ui_MainWindow(object):
         self.le_samplemin.setObjectName(_fromUtf8("le_samplemin"))
         self.horizontalLayout_13.addWidget(self.le_samplemin)
         self.lb_samplemax = QtGui.QLabel(self.gr_sample)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Preferred
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lb_samplemax.sizePolicy().hasHeightForWidth())
         self.lb_samplemax.setSizePolicy(sizePolicy)
         self.lb_samplemax.setMinimumSize(QtCore.QSize(80, 0))
         self.lb_samplemax.setMaximumSize(QtCore.QSize(80, 16777215))
-        self.lb_samplemax.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.lb_samplemax.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter
+        )
         self.lb_samplemax.setObjectName(_fromUtf8("lb_samplemax"))
         self.horizontalLayout_13.addWidget(self.lb_samplemax)
         self.le_samplemax = QtGui.QLineEdit(self.gr_sample)
@@ -634,7 +711,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.addLayout(self.verticalLayout_3)
         self.horizontalLayout_12.addWidget(self.gr_sample)
         self.verticalLayout.addLayout(self.horizontalLayout_12)
-        spacerItem6 = QtGui.QSpacerItem(20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        spacerItem6 = QtGui.QSpacerItem(
+            20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed
+        )
         self.verticalLayout.addItem(spacerItem6)
         self.horizontalLayout_17 = QtGui.QHBoxLayout()
         self.horizontalLayout_17.setObjectName(_fromUtf8("horizontalLayout_17"))
@@ -645,10 +724,14 @@ class Ui_MainWindow(object):
         self.pb_alignsave.setObjectName(_fromUtf8("pb_alignsave"))
         self.horizontalLayout_17.addWidget(self.pb_alignsave)
         self.verticalLayout.addLayout(self.horizontalLayout_17)
-        spacerItem7 = QtGui.QSpacerItem(20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
+        spacerItem7 = QtGui.QSpacerItem(
+            20, 8, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed
+        )
         self.verticalLayout.addItem(spacerItem7)
         self.br_outputlog = QtGui.QTextBrowser(self.layoutWidget)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
+        sizePolicy = QtGui.QSizePolicy(
+            QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.br_outputlog.sizePolicy().hasHeightForWidth())
@@ -670,9 +753,17 @@ class Ui_MainWindow(object):
         self.lb_map.setText(_translate("MainWindow", "Map", None))
         self.pb_map.setText(_translate("MainWindow", "choose map", None))
         self.gr_stage.setTitle(_translate("MainWindow", "Stage Alignment:", None))
-        self.tb_align.setTabText(self.tb_align.indexOf(self.tab_print), _translate("MainWindow", "Print", None))
-        self.tb_align.setTabText(self.tb_align.indexOf(self.tab_wafer), _translate("MainWindow", "Wafer", None))
-        self.lb_stagcoord.setText(_translate("MainWindow", "Use stage x, y, z from Orbis Vision.", None))
+        self.tb_align.setTabText(
+            self.tb_align.indexOf(self.tab_print),
+            _translate("MainWindow", "Print", None),
+        )
+        self.tb_align.setTabText(
+            self.tb_align.indexOf(self.tab_wafer),
+            _translate("MainWindow", "Wafer", None),
+        )
+        self.lb_stagcoord.setText(
+            _translate("MainWindow", "Use stage x, y, z from Orbis Vision.", None)
+        )
         item = self.tw_stage.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "A", None))
         item = self.tw_stage.verticalHeaderItem(1)
@@ -690,12 +781,26 @@ class Ui_MainWindow(object):
         self.tw_stage.setSortingEnabled(__sortingEnabled)
         self.lb_stagz.setText(_translate("MainWindow", "StagZ ", None))
         self.cb_rotonly.setText(_translate("MainWindow", "Rot. only**", None))
-        self.le_waferignore.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:7pt;\">*Sample column ignored for wafer.</span></p></body></html>", None))
-        self.lb_rotonly.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:7pt;\">**Use </span><span style=\" font-size:7pt; text-decoration: overline;\">BC</span><span style=\" font-size:7pt;\"> for rotation only, no skew.</span></p></body></html>", None))
+        self.le_waferignore.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p><span style=" font-size:7pt;">*Sample column ignored for wafer.</span></p></body></html>',
+                None,
+            )
+        )
+        self.lb_rotonly.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p><span style=" font-size:7pt;">**Use </span><span style=" font-size:7pt; text-decoration: overline;">BC</span><span style=" font-size:7pt;"> for rotation only, no skew.</span></p></body></html>',
+                None,
+            )
+        )
         self.gr_filter.setTitle(_translate("MainWindow", "Filters:", None))
         self.lb_keepcode.setText(_translate("MainWindow", "keep codes ", None))
-        self.lb_omitch.setText(_translate("MainWindow", "omit Ch\'s ", None))
-        self.gr_platecoord.setTitle(_translate("MainWindow", "Platemap Coordinate Limits:", None))
+        self.lb_omitch.setText(_translate("MainWindow", "omit Ch's ", None))
+        self.gr_platecoord.setTitle(
+            _translate("MainWindow", "Platemap Coordinate Limits:", None)
+        )
         self.lb_xmin.setText(_translate("MainWindow", "x_min ", None))
         self.lb_xmax.setText(_translate("MainWindow", "x_max ", None))
         self.lb_ymin.setText(_translate("MainWindow", "y_min ", None))
@@ -708,12 +813,23 @@ class Ui_MainWindow(object):
         self.gr_sample.setTitle(_translate("MainWindow", "Override Sample List:", None))
         self.lb_samplemin.setText(_translate("MainWindow", "sample_min ", None))
         self.lb_samplemax.setText(_translate("MainWindow", "sample_max ", None))
-        self.pb_preview.setText(_translate("MainWindow", "Preview output (rotation/skew/points)", None))
-        self.pb_alignsave.setText(_translate("MainWindow", "Generate stage and sample list", None))
-        self.br_outputlog.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Ready.</span></p></body></html>", None))
+        self.pb_preview.setText(
+            _translate("MainWindow", "Preview output (rotation/skew/points)", None)
+        )
+        self.pb_alignsave.setText(
+            _translate("MainWindow", "Generate stage and sample list", None)
+        )
+        self.br_outputlog.setHtml(
+            _translate(
+                "MainWindow",
+                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
+                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
+                "p, li { white-space: pre-wrap; }\n"
+                "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+                '<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:8pt;">Ready.</span></p></body></html>',
+                None,
+            )
+        )
+
 
 import alignprint_rc
